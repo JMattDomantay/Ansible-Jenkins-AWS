@@ -9,8 +9,7 @@
         wait: yes
         group_id: sg-a7e761dc
         vpc_subnet_id: subnet-4e026402
-        aws_access_key: "{{ AWS_EC2_CREATE_ID }}"
-        aws_secret_key: "{{ AWS_EC2_CREATE_KEY }}"
+
       #command: >
       #  aws ec2 run-instances
       #      --image-id ami-026dea5602e368e96
