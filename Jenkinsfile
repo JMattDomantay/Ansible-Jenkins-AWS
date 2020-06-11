@@ -8,10 +8,9 @@ pipeline{
         }
         stage('testingWithAWS'){
             steps{
-                withCredentials([usernamePassword(credentialsId: 'aws-ec2-creation', accessKeyVariable: 'AWS_ACCESS_KEY_ID', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY')]) {
+                withAWS(credentials: 'aws-ec2-creation', region: 'us-east-2')
                 sh 'echo $AWS_ACCESS_KEY_ID'
                 sh 'echo $AWS_SECRET_ACCESS_KEY'
-                }
             }
         }
     }
