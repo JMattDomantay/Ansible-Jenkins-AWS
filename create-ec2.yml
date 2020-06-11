@@ -1,0 +1,11 @@
+- name: Hoorah
+  hosts: localhost
+  tasks:
+    - name: Create EC2 Instance. 
+      command: >
+        aws ec2 run-instances
+            --image-id ami-026dea5602e368e96
+            --count 1
+            --instance-type t2.micro
+            --security-group-ids sg-a7e761dc
+            --subnet-id subnet-4e026402
