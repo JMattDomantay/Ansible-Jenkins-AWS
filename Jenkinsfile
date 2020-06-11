@@ -1,6 +1,6 @@
 pipeline{
     agent any
-    node{
+    stages{
         stage('check if File is good'){
             steps{
                 sh 'ansible-playbook -C create-ec2.yml'
